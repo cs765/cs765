@@ -13,8 +13,9 @@ int main() {
     double future_time = 0.0;
     double continuously_compounded_interest_rate = 10.0;
     std::cout
-            << "We calculate the future value of "
+            << "We calculate the future value of $"
             << initial_value
+            << " "
             << future_time
             << " years from today at a continuously compunded interest rate of "
             << continuously_compounded_interest_rate
