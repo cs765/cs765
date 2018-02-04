@@ -30,14 +30,9 @@
         $("#my-jumbo-id").load("jumbo.html");
     </script>
 
-    <div id="my-sidebar-id"></div>
-    <script>
-        $("#my-sidebar-id").load("sidebar.html");
-    </script>
-
     <main role="main" class="container">
         <div class="row">
-            <div class="col-md-8 blog-main">
+            <div class="blog-main">
                 <h3 class="pb-3 mb-4 font-italic border-bottom">
                     From the Firehose
                 </h3>
@@ -142,6 +137,11 @@
 
 
         </div><!-- /.row -->
+
+        <div id="my-sidebar-id"></div>
+        <script>
+            $("#my-sidebar-id").load("sidebar.html");
+        </script>
 
     </main><!-- /.container -->
     <div id="my-footer-id"></div>
