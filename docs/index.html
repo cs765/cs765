@@ -14,19 +14,26 @@
     <script src="vendor/popper.js-1.12.9/dist/umd/popper-utils.min.js"></script>
     <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-    <script>
-        $("#my-header-id").load("header.html");
-        $("#my-navigation-id").load("navigation-bar.html");
-        $("#my-jumbo-id").load("jumbo.html");
-        $("#my-sidebar-id").load("sidebar.html");
-        $("#my-footer-id").load("footer.html");
-    </script>
 </head>
 <body>
 <div class="container">
     <div id="my-header-id"></div>
+    <script>
+        $("#my-header-id").load("header.html");
+    </script>
     <div id="my-navigation-id"></div>
+    <script>
+        $("#my-navigation-id").load("navigation-bar.html");
+    </script>
     <div id="my-jumbo-id"></div>
+    <script>
+        $("#my-jumbo-id").load("jumbo.html");
+    </script>
+
+    <div id="my-sidebar-id"></div>
+    <script>
+        $("#my-sidebar-id").load("sidebar.html");
+    </script>
 
     <main role="main" class="container">
         <div class="row">
@@ -132,12 +139,15 @@
                 </nav>
 
             </div><!-- /.blog-main -->
-            <div id="my-sidebar-id"></div>
+
 
         </div><!-- /.row -->
 
     </main><!-- /.container -->
     <div id="my-footer-id"></div>
+    <script>
+        $("#my-footer-id").load("footer.html");
+    </script>
 
 </div>
 </body>
