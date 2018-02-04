@@ -13,12 +13,7 @@
 <body>
 <div class="container">
     <div id="my-header-id"></div>
-    <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href="#">HW1</a>
-        </nav>
-    </div>
-
+    <div id="my-navigation-id"></div>
     <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
             <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
@@ -190,9 +185,9 @@
     <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <script>
         $("#my-header-id").load("header.html");
+        $("#my-navigation-id").load("navigation-bar.html");
         $("#my-sidebar-id").load("sidebar.html");
     </script>
-</div>
 </div>
 </body>
 </html>
