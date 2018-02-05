@@ -10,7 +10,7 @@ double future_value(double F0, double t0, double t1, double r) {
 int main() {
     double initial_value = 100.0;
     double initial_time = 0.0;
-    double future_time = 10.0;
+    double future_time = 5.0;
     double continuously_compounded_interest_rate = 10.0;
     std::cout
             << "We calculate the future value of $"
@@ -21,6 +21,7 @@ int main() {
             << continuously_compounded_interest_rate
             << "%." << std::endl;
     std::cout << "The expected future value is: "
-              << "$" << future_value(100.0, 0.0, 10.0, 10.0) << std::endl;
+              << "$" << future_value(initial_value, initial_time, future_time, continuously_compounded_interest_rate)
+              << std::endl;
     return 0;
 }
