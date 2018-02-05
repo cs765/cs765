@@ -32,9 +32,9 @@ int df_and_r(double F0, double F1, double t0, double t1, double &df, double &r) 
 
 int main() {
     double today_cash_flow = 100.0;
-    double future_cash_flow = 164.872;
+    double future_cash_flow = 271.828;
     double today_time = 0.0;
-    double future_time = 5.0;
+    double future_time = 10.0;
     double df;
     double r;
     int result = df_and_r(today_cash_flow, future_cash_flow, today_time, future_time, df, r);
