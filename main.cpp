@@ -15,13 +15,12 @@ int main() {
     std::cout
             << "We calculate the future value of $"
             << initial_value
-            << " "
+            << ", "
             << future_time
             << " years from today at a continuously compounded interest rate of "
             << continuously_compounded_interest_rate
-            << "%. Please stand by while we calculate the results. "
-            << "The expected future value is: "
-            << std::endl;
-    std::cout << "$" << future_value(100.0, 0.0, 10.0, 10.0) << std::endl;
+            << "%." << std::endl;
+    std::cout << "The expected future value is: "
+              << "$" << future_value(100.0, 0.0, 10.0, 10.0) << std::endl;
     return 0;
 }
