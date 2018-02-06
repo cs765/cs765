@@ -11,6 +11,9 @@ double get_bond_price(double face, double yield, double coupon, double number_of
 }
 
 int main() {
-    std::cout << get_bond_price(100, 0, 4, 4) << std::endl;
+    int yields[5] = {0, 2, 4, 6, 8};
+    for (int yield : yields) {
+        std::cout << get_bond_price(100, yield / 100, 4, 4) << std::endl;
+    }
     return 0;
 }
