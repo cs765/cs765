@@ -11,7 +11,7 @@ double get_bond_price(double face, double yield, double coupon1, double coupon2,
 }
 
 int main() {
-    double yields[5] = {1.0, 3.0, 5.0, 7.0, 9.0};
+    double yields[3] = {4.0, (3 + 4) / 2.0, 4.0};
     std::cout << "y (%)" << "\t\t\t" << "B(y)" << std::endl;
     for (double yield:yields) {
         std::cout << yield << "\t\t\t" << get_bond_price(100.0, yield / 100.0, 1.0, 3.0, 5.0, 7.0) << std::endl;
