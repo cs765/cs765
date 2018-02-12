@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my journey in 765!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="vendor/popper.js-1.12.9/dist/umd/popper.min.js"></script>
+    <script src="vendor/popper.js-1.12.9/dist/umd/popper-utils.min.js"></script>
+    <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="my-header-id"></div>
+    <script>
+        $("#my-header-id").load("header.html");
+    </script>
+    <div id="my-navigation-id"></div>
+    <script>
+        $("#my-navigation-id").load("navigation-bar.html");
+    </script>
+    <div id="my-jumbo-id"></div>
+    <script>
+        $("#my-jumbo-id").load("jumbo.html");
+    </script>
+
+    <main role="main" class="container">
+        <article>
+            <header>
+                <h1>
+                    $100 today or $120 ten years from now?
+                </h1>
+                <h2>
+                    Which option should you take?
+                </h2>
+                <p>
+                    Well, in this case the answer seems pretty obvious.
+                    You should take $100 today over $120 in ten years.
+                    But why?
+                    If we change the numbers a bit, can you still make a good decision?
+                </p>
+            </header>
+        </article>
+        <div id="my-sidebar-id"></div>
+        <script>
+            $("#my-sidebar-id").load("sidebar.html");
+        </script>
+    </main><!-- /.container -->
+    <div id="my-footer-id"></div>
+    <script>
+        $("#my-footer-id").load("footer.html");
+    </script>
+
+</div>
+</body>
+</html>
