@@ -18,10 +18,7 @@ Bond::Bond(double T, double F, double c, int freq) {
     }
 }
 
-Bond::~Bond() {
-    coupons.clear();
-    num_coupons = 0;
-}
+Bond::~Bond() = default;
 
 int Bond::yield(double B_target, double tol, int max_iter, double t0, double &y, int &num_iter) const {
     return 0;
