@@ -14,14 +14,13 @@ Bond::Bond(double T, double F, double c, int freq) {
     assert(num_coupons >= 0);
     T_maturity = num_coupons / cpn_freq;
     if (num_coupons > 0) {
-        for (int i = 0; i < num_coupons; ++i) {
-            coupons.resize(num_coupons, c);
-        }
+        coupons.resize(num_coupons, c);
     }
 }
 
 Bond::~Bond() {
-
+    coupons.clear();
+    num_coupons = 0;
 }
 
 int Bond::yield(double B_target, double tol, int max_iter, double t0, double &y, int &num_iter) const {
