@@ -5,6 +5,7 @@
 #include "Bond.h"
 
 Bond::Bond(double T, double F, double c, int freq) {
+    if (F >= 0) { Face = F; }
 
 }
 
