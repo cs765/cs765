@@ -18,5 +18,5 @@ compiler: gcc
 
 script:
   - g++ --version
-  - g++ main.cpp -o mybinary -std=gnu++11
+  - g++ main.cpp -o mybinary -std=gnu++17
   - ./mybinary
