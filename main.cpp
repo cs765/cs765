@@ -1,5 +1,6 @@
 #include <cmath>
 #include <iostream>
+#include "Bond.h"
 
 double get_bond_price(double face, double yield, double coupon1, double coupon2, double coupon3, double coupon4) {
     double running_total = 0.0;

@@ -2,11 +2,22 @@
 // Created by kus on 2/12/18.
 //
 
+#include <cassert>
 #include "Bond.h"
 
 Bond::Bond(double T, double F, double c, int freq) {
-    if (F >= 0) { Face = F; }
-
+    Face = F;
+    assert(Face >= 0);
+    cpn_freq = freq;
+    assert(cpn_freq >= 1);
+    num_coupons = int(cpn_freq * T + tol);
+    assert(num_coupons >= 0);
+    T_maturity = num_coupons / cpn_freq;
+    if (num_coupons > 0) {
+        for (int i = 0; i < num_coupons; ++i) {
+            coupons.resize(num_coupons, c);
+        }
+    }
 }
 
 Bond::~Bond() {

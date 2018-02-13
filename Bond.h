@@ -28,6 +28,8 @@ public:
     double FairValue(double t0, double y) const;
 
     double maturity() const;
+
+    const double tol = 1.0e-6;
 };
 
 
