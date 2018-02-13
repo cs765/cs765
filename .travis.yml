@@ -6,9 +6,9 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-7
+            - g++-17
       env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+        - MATRIX_EVAL="CC=gcc-17 && CXX=g++-17"
 
 before_install:
     - eval "${MATRIX_EVAL}"
@@ -18,5 +18,4 @@ compiler: gcc
 
 script:
   - g++ --version
-  - g++ main.cpp -o mybinary -std=gnu++17
-  - ./mybinary
+  - g++ main.cpp -o mybinary -std=gnu++17 - ./mybinary
