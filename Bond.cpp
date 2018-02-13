@@ -29,7 +29,11 @@ int Bond::FV_duration(double t0, double y, double &B, double &Macaulay_duration,
 }
 
 double Bond::FairValue(double t0, double y) const {
-    return 0;
+    double B = 0;
+    double Macaulay_duration = 0;
+    double modified_duration = 0;
+    FV_duration(t0, y, B, Macaulay_duration, modified_duration);
+    return B;
 }
 
 double Bond::maturity() const {
