@@ -3,4 +3,4 @@ project(765)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(765 main.cpp)
+add_executable(765 main.cpp Bond.cpp Bond.h)
