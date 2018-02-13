@@ -29,6 +29,8 @@ public:
 
     double maturity() const;
 
+    int set_coupons(std::vector<double> &c);
+
     const double tol = 1.0e-6;
 };
 

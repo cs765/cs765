@@ -35,3 +35,14 @@ double Bond::FairValue(double t0, double y) const {
 double Bond::maturity() const {
     return T_maturity;
 }
+
+int Bond::set_coupons(std::vector<double> &c) {
+    for (int i = 0; i < coupons.size(); ++i) {
+        if (c[i] <= 0.0) {
+            coupons[i] = 0.0;
+        } else {
+            coupons[i] = c[i];
+        }
+    }
+    return 0;
+}
