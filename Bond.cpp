@@ -25,6 +25,10 @@ int Bond::yield(double B_target, double tol, int max_iter, double t0, double &y,
 }
 
 int Bond::FV_duration(double t0, double y, double &B, double &Macaulay_duration, double &modified_duration) const {
+    if (num_coupons <= 0 || t0 >= T_maturity) {
+        // fail
+        return 1;
+    }
     return 0;
 }
 
