@@ -17,7 +17,7 @@ int main() {
     for (double yield:yields) {
         std::cout << yield << "\t\t\t" << get_bond_price(100.0, yield / 100.0, 1.0, 3.0, 5.0, 7.0) << std::endl;
     }
-    Bond bond = Bond(10, 100, 0, 2);
+    Bond bond = Bond(10, 100, 0., 2);
     std::cout << "Our constant tolerance for this bond is " << bond.tol << ". " << std::endl;
     return 0;
 }
