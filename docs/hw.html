@@ -1,7 +1,56 @@
-<div class="blog-post">
-    <h2 class="blog-post-title"></h2>
-    <p class="blog-post-meta">February 04, 2018 by <a href="https://github.com/9034725985">kus</a></p>
-    <p>
-        Placeholder
-    </p>
-</div><!-- /.blog-post -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my journey in 765!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="vendor/popper.js-1.12.9/dist/umd/popper.min.js"></script>
+    <script src="vendor/popper.js-1.12.9/dist/umd/popper-utils.min.js"></script>
+    <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="my-header-id"></div>
+    <script>
+        $("#my-header-id").load("header.html");
+    </script>
+    <div id="my-navigation-id"></div>
+    <script>
+        $("#my-navigation-id").load("navigation-bar.html");
+    </script>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                    From the observer...
+                </h3>
+                <div class="blog-post" id="generic-blog-post">
+                    <h2 class="blog-post-title"></h2>
+                    <p class="blog-post-meta">February 04, 2018 by <a href="https://github.com/9034725985">kus</a></p>
+                    <p>
+                        Placeholder
+                    </p>
+                </div><!-- /.blog-post -->
+            </div><!-- /.blog-main -->
+        </div><!-- /.row -->
+        <div id="my-sidebar-id"></div>
+        <script>
+            $("#my-sidebar-id").load("sidebar.html");
+        </script>
+    </main><!-- /.container -->
+    <div id="my-footer-id"></div>
+    <script>
+        $("#my-footer-id").load("footer.html");
+    </script>
+
+</div>
+</body>
+</html>
