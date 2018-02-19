@@ -1,8 +1,14 @@
 #include <cmath>
+#include <iostream>
+#include <random>
+#include <algorithm>
+#include <list>
 #include <cassert>
 
+class iterator;
+
 bool are_same(double a, double b) {
-    double EPSILON = pow(1.0, -4);
+    double EPSILON = pow(1.0, -8);
     return fabs(a - b) < EPSILON;
 }
 
@@ -40,12 +46,11 @@ double get_bond_price_from_yield(double F, double c, double y, int n) {
 }
 
 int main() {
-    int my_array[100];
-    double yields[100];
-    for (int i = 0; i < 100; ++i) {
-        my_array[i] = i;
-        yields[i] = (double) i;
-    }
+    std::list<double> yields(10000);
+    std::iota(yields.begin(), yields.end(), 1);
+
+    std::vector<std::list<double>::iterator> v(yields.size());
+    std::iota(v.begin(), v.end(), yields.begin());
     for (double yield:yields) {
         assert(are_same(get_bond_price(101.2152, yield / 100.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0),
                         get_bond_price_from_yield(101.2152, 4.0, yield, 10)));
