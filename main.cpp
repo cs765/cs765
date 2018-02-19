@@ -1,7 +1,10 @@
 #include <cmath>
-#include <iostream>
 #include <cassert>
-#include "Bond.h"
+
+bool are_same(double a, double b) {
+    double EPSILON = pow(1.0, -4);
+    return fabs(a - b) < EPSILON;
+}
 
 double get_bond_price(double face, double yield, double coupon1, double coupon2, double coupon3, double coupon4) {
     double running_total = 0.0;
@@ -31,9 +34,9 @@ double get_bond_price_from_yield(double F, double c, double y, int n) {
 
 int main() {
     double yields[10] = {0., 1., 2., 3., 4., 5., 6., 7., 8., 9.};
-    std::cout << "y (%)" << "\t\t\t" << "B(y)" << std::endl;
     for (double yield:yields) {
-        assert(yield == yield);
+        assert(are_same(get_bond_price(101.2152, yield / 100.0, 4.0, 4.0, 4.0, 4.0),
+                        get_bond_price_from_yield(101.2152, 4.0, yield, 4)));
     }
     return 0;
 }
