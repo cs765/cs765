@@ -46,7 +46,7 @@ double get_bond_price_from_yield(double F, double c, double y, int n) {
 }
 
 int main() {
-    std::list<double> yields(100000);
+    std::list<double> yields(100000000);
     std::iota(yields.begin(), yields.end(), 1);
 
     std::vector<std::list<double>::iterator> v(yields.size());
