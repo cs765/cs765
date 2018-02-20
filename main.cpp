@@ -12,19 +12,9 @@ bool are_same(double a, double b) {
     return fabs(a - b) < EPSILON;
 }
 
-double get_bond_price(double face, double yield, double coupon1, double coupon2, double coupon3, double coupon4,
-                      double coupon5, double coupon6, double coupon7, double coupon8, double coupon9, double coupon10) {
+double get_bond_price(double face, double yield, double coupon1) {
     double running_total = 0.0;
-    running_total += (0.5 * coupon1) / (1 + 0.5 * yield);
-    running_total += (0.5 * coupon2) / pow(1 + 0.5 * yield, 2);
-    running_total += (0.5 * coupon3) / pow(1 + 0.5 * yield, 3);
-    running_total += (0.5 * coupon4) / pow(1 + 0.5 * yield, 4);
-    running_total += (0.5 * coupon5) / pow(1 + 0.5 * yield, 5);
-    running_total += (0.5 * coupon6) / pow(1 + 0.5 * yield, 6);
-    running_total += (0.5 * coupon7) / pow(1 + 0.5 * yield, 7);
-    running_total += (0.5 * coupon8) / pow(1 + 0.5 * yield, 8);
-    running_total += (0.5 * coupon9) / pow(1 + 0.5 * yield, 9);
-    running_total += (face + 0.5 * coupon10) / pow(1 + 0.5 * yield, 10);
+    running_total += (face + 0.5 * coupon1) / pow(1 + 0.5 * yield, 10);
     return running_total;
 }
 
@@ -46,14 +36,14 @@ double get_bond_price_from_yield(double F, double c, double y, int n) {
 }
 
 int main() {
-    std::list<double> yields(100000000);
+    std::list<double> yields(100);
     std::iota(yields.begin(), yields.end(), 1);
 
     std::vector<std::list<double>::iterator> v(yields.size());
     std::iota(v.begin(), v.end(), yields.begin());
     for (double yield:yields) {
-        assert(are_same(get_bond_price(101.2152, yield / 100.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0),
-                        get_bond_price_from_yield(101.2152, 4.0, yield, 10)));
+        assert(are_same(get_bond_price(101.2152, yield / 100.0, 4.0),
+                        get_bond_price_from_yield(101.2152, 4.0, yield, 1)));
     }
     return 0;
 }
