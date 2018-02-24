@@ -65,6 +65,55 @@
                     that the future value of $100 10 years from today at a continuously compounded interest rate of 10%
                     is $271.828.
                 </p>
+                <pre>
+        #include &lt;iostream&gt;
+        #include &lt;cmath&gt;
+
+        double future_value(double F0, double t0, double t1, double r) {
+            double r_decimal = 0.01 * r;
+            double F1 = F0 * exp(r_decimal * (t1 - t0));
+            return F1;
+        }
+
+        int main() {
+            double initial_value = 100.0;
+            double initial_time = 0.0;
+            double future_time = 0.0;
+            double continuously_compounded_interest_rate = 10.0;
+            std::cout
+                    << "We calculate the future value of "
+                    << initial_value
+                    << future_time
+                    << " years from today at a continuously compunded interest rate of "
+                    << continuously_compounded_interest_rate
+                    << "%. Please stand by while we calculate the results. "
+                    << "The expected future value is: "
+                    << std::endl;
+            std::cout << "$" << future_value(100.0, 0.0, 10.0, 10.0) << std::endl;
+            return 0;
+        }
+    </pre>
+                <p>
+                    In the above example,
+                    <a href="https://travis-ci.org/cs765/cs765/jobs/337352275#L448">you will notice</a>
+                    that the future value of $100 10 years from today at a continuously compounded interest rate of 10%
+                    is $271.828.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis purus turpis, a aliquam urna sodales a. Cras et nisl molestie, condimentum ligula ut, porta erat. Curabitur dictum ante eu commodo iaculis. Donec dapibus, neque non imperdiet ornare, purus purus scelerisque sem, sed semper tellus ipsum eget augue. Sed quis aliquam elit. Quisque mattis sem ac velit vestibulum vestibulum. Proin arcu massa, ullamcorper eu dolor in, aliquet accumsan libero. Fusce placerat interdum tristique. Etiam sed vulputate libero, sit amet tristique libero.
+                </p>
+                <p>
+                    Proin scelerisque orci nec commodo maximus. Aliquam at ante molestie, pretium metus eget, interdum dolor. Sed vehicula tortor sed efficitur placerat. Nam faucibus elementum dui, nec elementum augue egestas sit amet. Nulla ac pretium massa. Phasellus ut venenatis massa. Proin quis purus mollis, pulvinar est at, pretium felis. Ut in ornare sem, in consectetur justo. Donec eu ex non ante finibus faucibus. Nunc fringilla scelerisque rhoncus. Proin in ipsum facilisis, fringilla odio eu, imperdiet risus.
+                </p>
+                <p>
+                    Suspendisse aliquam tellus id accumsan egestas. Etiam purus lectus, tempor in malesuada ac, pretium id risus. Curabitur tempus sem et enim placerat mattis. Sed pellentesque ornare turpis in eleifend. Fusce quis risus vitae sapien egestas commodo. In hac habitasse platea dictumst. Ut dignissim mollis massa ut tristique. Aliquam porta, mi eu scelerisque laoreet, dolor augue iaculis augue, ac faucibus nisi tellus ac orci. Etiam tempus sem efficitur neque vehicula euismod. Nam finibus risus libero, quis consectetur tortor consectetur eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                </p>
+                <p>
+                    Integer ut vehicula sem. Proin consequat dolor nec malesuada scelerisque. Morbi cursus rutrum ipsum ut tristique. Mauris bibendum est sit amet lobortis faucibus. Aenean ac fermentum tellus. Vestibulum tincidunt nulla eget lacus elementum, a faucibus neque lacinia. Sed sed placerat odio. Sed et mauris ac felis molestie sagittis at et leo. Sed finibus nisl at tincidunt rhoncus. Mauris vel tellus auctor, faucibus arcu scelerisque, placerat mauris. Praesent vestibulum, tellus ut volutpat fringilla, libero elit vehicula diam, vel placerat enim ex suscipit enim. Proin consectetur, mauris at facilisis tempor, turpis nisi imperdiet tellus, vel dignissim lorem ex ultricies nunc.
+                </p>
+                <p>
+                    Fusce vestibulum porta ipsum eget laoreet. Cras interdum, enim vitae tristique semper, ex diam vulputate risus, id porttitor nulla nunc gravida est. Curabitur sed metus vulputate, lacinia leo non, ultrices arcu. Nam vitae augue ac quam vehicula vulputate lobortis sed leo. Donec consectetur ut purus vitae rhoncus. Maecenas commodo ex varius libero posuere gravida. Curabitur nec cursus magna. Mauris ut dolor at turpis consectetur scelerisque. Donec ornare nisl dui, in mattis ante placerat ac. Curabitur suscipit libero et nunc egestas facilisis. 
+                </p>
             </div><!-- /.blog-post -->
         </div><!-- /.row -->
         <div id="my-sidebar-id"></div>
