@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <assert.h>
+#include <cassert>
 
 class Bond {
 public:
@@ -16,10 +16,7 @@ public:
         }
     }
 
-    ~Bond() {
-        coupons.clear();
-        num_coupons = 0;
-    }
+    ~Bond() = default;;
 
     // public methods
     int set_coupons(std::vector<double> &c);
